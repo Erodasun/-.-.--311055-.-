@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        /*1 свойство transition*/
+        .header_img {
+            transition: all 1s;
+        }
+
+        .header_img:hover{
+            transform: scale(1.1, 1.1);
+        }
+        /*2 свойство transition*/
+        .fish{
+            -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+            transition: width 2s, height 2s, transform 2s;
+        }
+
+        .fish:hover{
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }   
+        /*1 правило keyFrames*/
+        .btn{
+            position:relative;
+            animation-name: first;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-direction: alternate;
+            animation-iteration-count: 2;
+        }
+        @keyframes first {
+            0% {
+                background-color: rgb(255, 207, 47);
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: red;
+                left: 80px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 80px;
+                top: 80px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 80px;
+            }
+
+            100% {
+                background-color: rgb(255, 207, 47);
+                left: 0px;
+                top: 0px;
+            }
+        }
+        /*2 правило keyFrames*/
+        .sent{
+            animation-name: grow;
+            animation-duration: 1s;
+            animation-iteration-count: 5;
+            animation-timing-function: ease;
+        }
+        @keyframes grow {
+            0% {
+                transform: scaleX(1.1);
+            }
+            50% {
+                transform: scaleX(1.4);
+                background: rgb(255, 2, 2);
+            }
+        }
+        .sent:hover {
+        animation-play-state: paused;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="img/logo.png" alt="logo">
+            <div class="wrapper">
+                <div class="offer">
+                    <h1 class="title">С помощью нас<br> вы сможете создать то, о чем</h1>
+                    <span class="title_span">желаете!</span>
+                    <p class="offer_text">Наши возможности + опыт позволяет Вам достичь огромного успеха. Мы верим в вас! И знаем это на все 100%. Вас не остановить!</p>
+                    <a href="#" class="btn">Узнать больше...</a>
+                </div>
+                <img  class="header_img" src="img/header-img.png" alt="pic">
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="container">
+            <h2 class="main_title">Что Вам необходимо?</h2>
+            <div class="main_block">
+                <div class="blocks animate__animated animate__rollIn"> <!-- 1 объект из animate.css -->
+                    <img src="img/f3.png" alt="pic">
+                    <h3>Первый блок</h3>
+                    <p class="fish">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                </div>
+                <div class="blocks animate__animated animate__fadeInDown animate__delay-1s"> <!-- 2 объект из animate.css -->
+                    <img src="img/f4.png" alt="pic">
+                    <h3>Второй блок</h3>
+                    <p class="fish">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                </div>
+                <div class="blocks animate__animated animate__flipInY animate__delay-2s"> <!-- 3 объект из animate.css -->
+                    <img src="img/f5.png" alt="pic">
+                    <h3>Третий блок</h3>
+                    <p class="fish">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form">
+        <div class="container">
+            <h2 class="form_block">Форма заказа обратного звонка</h2>
+            <form class="call" action="#" method="POST" enctype="multipart/form-data">
+                <input type="text" name="username" id="username" value="" placeholder="Имя">
+                <input type="text" name="mail" id="mail" value="" placeholder="Введите свой E-mail">
+                <input type="tel" name="tel" id="tel" placeholder="Телефон">
+                <input type="text" name="username" id="username" value="" placeholder="Какая тема Вас интересует?">
+                <button type="submit" class="sent">Отправить вопрос!</button>
+            </form>
+
+        </div>
+    </section>
+
+    <footer>
+        © Все на этом сайте защищено
+    </footer>
+
+</body>
+</html>
