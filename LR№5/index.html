@@ -36,7 +36,7 @@
             animation-duration: 3s;
             animation-delay: 1s;
             animation-direction: alternate;
-            animation-iteration-count: 2;
+            animation-iteration-count: 4;
         }
         @keyframes first {
             0% {
@@ -46,19 +46,19 @@
             }
 
             25% {
-                background-color: red;
+                background-color: rgb(255, 0, 212);
                 left: 80px;
                 top: 0px;
             }
 
             50% {
-                background-color: blue;
+                background-color: rgb(211, 10, 252);
                 left: 80px;
                 top: 80px;
             }
 
             75% {
-                background-color: green;
+                background-color: rgb(83, 46, 248);
                 left: 0px;
                 top: 80px;
             }
@@ -73,16 +73,16 @@
         .sent{
             animation-name: grow;
             animation-duration: 1s;
-            animation-iteration-count: 5;
+            animation-iteration-count: 10;
             animation-timing-function: ease;
         }
         @keyframes grow {
             0% {
-                transform: scaleX(1.1);
+                transform: scaleX(1.0);
             }
             50% {
                 transform: scaleX(1.4);
-                background: rgb(255, 2, 2);
+                background: rgb(255, 2, 107);
             }
         }
         .sent:hover {
